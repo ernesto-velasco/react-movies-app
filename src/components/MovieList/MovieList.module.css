@@ -1,0 +1,63 @@
+.header {
+  margin-bottom: 20px;
+}
+
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  column-gap: 10px;
+  row-gap: 25px;
+  max-width: 100vw;
+  font-size: 14px;
+}
+
+.movie > p {
+  margin: auto 9px;
+}
+
+.movieBody {
+  position: relative;
+  height: 260px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.movieBody img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movieBody:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0px;
+  color: aliceblue;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-size: 14px;
+}
+
+.overlay:hover > svg {
+  fill: tomato;
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    opacity: 1;
+  }
+  .overlay > svg {
+    fill: tomato;
+  }
+}

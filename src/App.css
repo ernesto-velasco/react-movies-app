@@ -1,0 +1,8 @@
+.App {
+  display: grid;
+  grid-template-columns: minmax(100px, 770px) ;
+  grid-template-rows: 180px auto;
+  grid-gap: 10px;
+  justify-content:center;
+  margin: 10px 10px;
+}

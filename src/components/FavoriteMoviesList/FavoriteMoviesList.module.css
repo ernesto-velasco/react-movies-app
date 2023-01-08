@@ -1,0 +1,59 @@
+.header {
+  margin-bottom: 20px;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 25px;
+}
+
+.movieBody {
+  width: 150px;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movieBody img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+  width: 100%;
+  padding: 10px 0px;
+  color: aliceblue;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  text-align: center;
+}
+
+.overlay:hover > svg {
+  fill: none;
+}
+
+.movieBody:hover > .overlay {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    opacity: 1;
+  }
+  .overlay > svg {
+    fill: none;
+  }
+}
